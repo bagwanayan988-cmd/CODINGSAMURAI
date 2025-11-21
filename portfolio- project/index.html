@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ayan Bagwan — Portfolio</title>
+
+    <!-- make sure this matches your CSS filename -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- NAV -->
+        <header class="nav">
+            <div class="brand">
+                <div class="logo">AB</div>
+                <div class="name">Ayan Bagwan<br><span class="muted">Web dev • DSA enthusiast</span></div>
+            </div>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+                <button id="resumeBtn" class="btn-outline">Resume</button>
+            </nav>
+        </header>
+
+        <!-- HERO (IMPORTANT - was missing / misplaced in your file) -->
+        <main class="hero">
+            <section class="left">
+                <h1>Hi, I'm <span class="accent">Ayan</span> — I build clean & fast websites.</h1>
+                <p class="muted">Simple, maintainable code. Good UI. Fast load. Projects focused on DSA, DBMS & web apps.</p>
+
+                <div class="controls">
+                    <a class="btn primary" href="#projects">See Projects</a>
+                    <button class="btn" id="hireBtn">Hire / Contact</button>
+                </div>
+
+                <p class="muted small">Based in Pune · Available for internships & freelance</p>
+            </section>
+
+            <aside class="card profile">
+                <div class="avatar-wrap">
+                    <!-- Using uploaded image path from this environment: -->
+                    <img src="images/profile.jpeg" alt="Ayan" class="avatar">
+                </div>
+
+                <h3>Ayan Bagwan</h3>
+                <p class="muted">Front-end · MySQL · Java · DSA</p>
+
+                <div class="card-actions">
+                    <button class="btn">Message</button>
+                    <a class="btn" href="#projects">Portfolio</a>
+                </div>
+            </aside>
+        </main>
+
+        <!-- ABOUT -->
+        <section id="about" class="cards">
+            <div class="card">
+                <h3>About Me</h3>
+                <p class="muted">Mainly focused on creating simple, usable websites and learning algorithms. I love solving problems — both through code and by building user-friendly interfaces.</p>
+                <div class="skills">
+                    <span>HTML</span><span>CSS</span><span>JavaScript</span><span>MySQL</span><span>Java</span><span>DSA</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Quick Stats</h3>
+                <div class="stats">
+                    <div><strong>12+</strong>
+                        <div class="muted">Projects</div>
+                    </div>
+                    <div><strong>3k+</strong>
+                        <div class="muted">Lines of Code</div>
+                    </div>
+                </div>
+                <p class="muted">Minimal dependencies — plain JS and well-structured CSS so the site stays fast and easy to maintain.</p>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="filters">
+                <button data-filter="all">All</button>
+                <button data-filter="web">Web</button>
+                <button data-filter="ds">DSA</button>
+                <button data-filter="db">DB</button>
+            </div>
+
+            <div class="grid" id="projectsGrid">
+                <article class="proj" data-type="web">
+                    <h4>Portfolio Website</h4>
+                    <p class="muted">Single-page responsive portfolio with CSS animations and contact form.</p>
+                    <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+                    <div class="proj-actions"><button onclick="openProject('Portfolio Website','Built with plain HTML/CSS/JS. Responsive and minimal.')">Preview</button></div>
+                </article>
+
+                <article class="proj" data-type="db">
+                    <h4>DBMS Student Portal</h4>
+                    <p class="muted">MySQL-backed student management UI for CRUD ops.</p>
+                    <div class="tags"><span>MySQL</span><span>PHP</span></div>
+                </article>
+
+                <article class="proj" data-type="ds">
+                    <h4>Algorithm Visualizer</h4>
+                    <p class="muted">Visualizer for sorting & searching algorithms.</p>
+                    <div class="tags"><span>JS</span><span>Algorithms</span></div>
+                </article>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="cards contact">
+            <div class="card">
+                <h3>Contact</h3>
+                <label>Name</label>
+                <input id="name" placeholder="Your name">
+                <label>Email</label>
+                <input id="email" placeholder="you@example.com">
+                <label>Message</label>
+                <textarea id="message" placeholder="Tell me about your idea..."></textarea>
+                <div class="controls">
+                    <button class="btn primary" id="sendBtn">Send Message</button>
+                    <button class="btn" id="clearBtn">Clear</button>
+                </div>
+                <div id="formStatus" class="muted small"></div>
+            </div>
+
+            <div class="card details">
+                <h3>Details</h3>
+                <p class="muted"><strong>Email:</strong> bagwanayan988@gmail.com</p>
+                <p class="muted"><strong>Phone:</strong> +91 82377 86555</p>
+                <p class="muted"><strong>Location:</strong> Pune, India</p>
+            </div>
+        </section>
+
+        <footer class="foot">Made with ❤️ — Built by <b>Ayan Bagwan</b>. © <span id="year"></span></footer>
+    </div>
+
+    <!-- modal -->
+    <div id="modal" class="modal" aria-hidden="true">
+        <div class="modal-inner">
+            <h3 id="mTitle"></h3>
+            <p id="mDesc" class="muted"></p>
+            <button onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <!-- make sure this matches your JS filename -->
+    <script src="script.js"></script>
+</body>
+
+</html>
